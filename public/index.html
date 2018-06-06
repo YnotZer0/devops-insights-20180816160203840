@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>Assistant with Discovery Chat App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Load libraries -->
+  <!-- IE required polyfills, in this exact order -->
+  <script src="vendor.min.js"></script>
+  
+  <style>hilite {display: inline-block; background: #ffffb3}</style>
+
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="setup">
+ <div class="setup-msg"></div>
+ <div class="setup-loader"><img class="setup-loader-img" src="../img/loader.gif"></div>
+  <div class="setup-phase"></div>
+  <div class="setup-phase-msg"></div>
+  <div class="error-phase"></div>
+  <div class="error-phase-msg"></div>
+  <div class="circles">
+  <div class="active-circle"></div>
+  <div class="non-active-circle"></div>
+  </div>
+</div>
+
+<chat-app>Loading...</chat-app>
+
+<script>
+  System.config ( {
+    packages: {
+      js: {
+        format: 'register',
+        defaultExtension: 'js'
+      }
+    }
+  } );
+  System.import ( 'js/boot' ).then ( null, console.error.bind ( console ) );
+</script>
+</body>
+</html>
